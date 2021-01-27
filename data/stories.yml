@@ -1,0 +1,131 @@
+version: "2.0"
+
+stories:
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: plane_ticket_form
+  - active_loop: plane_ticket_form
+  - slot_was_set:
+    - requested_slot: origin
+  - slot_was_set:
+    - origin: Los Angeles
+  - slot_was_set:
+    - requested_slot: destination
+  - slot_was_set:
+    - destination: New York
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: '12'
+  - slot_was_set:
+    - requested_slot: seats
+  - slot_was_set:
+    - seats: '4'
+  - slot_was_set:
+    - requested_slot: luggage
+  - slot_was_set:
+    - luggage: '2'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_flight_booked
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: plane_ticket_form
+  - active_loop: plane_ticket_form
+  - slot_was_set:
+    - requested_slot: origin
+  - slot_was_set:
+    - origin: Bucharest
+  - slot_was_set:
+    - requested_slot: destination
+  - slot_was_set:
+    - destination: Groningen
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: '20'
+  - slot_was_set:
+    - requested_slot: seats
+  - slot_was_set:
+    - seats: '1'
+  - slot_was_set:
+    - requested_slot: luggage
+  - slot_was_set:
+    - luggage: '1'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_flight_booked
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: plane_ticket_form
+  - active_loop: plane_ticket_form
+  - slot_was_set:
+    - requested_slot: origin
+  - slot_was_set:
+    - origin: Varna
+  - slot_was_set:
+    - requested_slot: destination
+  - slot_was_set:
+    - destination: Barcelona
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: '14'
+  - slot_was_set:
+    - requested_slot: seats
+  - slot_was_set:
+    - seats: '2'
+  - slot_was_set:
+    - requested_slot: luggage
+  - slot_was_set:
+    - luggage: '0'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_flight_booked
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: plane_ticket_form
+  - active_loop: plane_ticket_form
+  - slot_was_set:
+    - requested_slot: origin
+  - slot_was_set:
+    - origin: Athens
+  - slot_was_set:
+    - requested_slot: destination
+  - slot_was_set:
+    - destination: Dublin
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: '16'
+  - slot_was_set:
+    - requested_slot: seats
+  - slot_was_set:
+    - seats: '2'
+  - slot_was_set:
+    - requested_slot: luggage
+  - slot_was_set:
+    - luggage: '1'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_flight_booked

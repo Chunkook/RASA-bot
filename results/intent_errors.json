@@ -1,0 +1,122 @@
+[
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.4051915109157562
+    }
+  },
+  {
+    "text": "Good day",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5910615921020508
+    }
+  },
+  {
+    "text": "Have a nice evening",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6555845737457275
+    }
+  },
+  {
+    "text": "exactly",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.3765024244785309
+    }
+  },
+  {
+    "text": "that's right",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.590786874294281
+    }
+  },
+  {
+    "text": "wrong",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.4443521201610565
+    }
+  },
+  {
+    "text": "incorrect",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9499038457870483
+    }
+  },
+  {
+    "text": "not true",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.7451289892196655
+    }
+  },
+  {
+    "text": "I want to transfer the money to person",
+    "intent": "person_transfer",
+    "intent_prediction": {
+      "name": "person_request",
+      "confidence": 0.1939338743686676
+    }
+  },
+  {
+    "text": "person",
+    "intent": "person_transfer",
+    "intent_prediction": {
+      "name": "person_request",
+      "confidence": 0.3319500982761383
+    }
+  },
+  {
+    "text": "To person",
+    "intent": "person_transfer",
+    "intent_prediction": {
+      "name": "person_request",
+      "confidence": 0.3085791766643524
+    }
+  },
+  {
+    "text": "I want to transfer the money to Gisela",
+    "intent": "person_transfer",
+    "intent_prediction": {
+      "name": "person_request",
+      "confidence": 0.16757717728614807
+    }
+  },
+  {
+    "text": "[Oleg] (person)",
+    "intent": "person_transfer",
+    "intent_prediction": {
+      "name": "person_request",
+      "confidence": 0.28395646810531616
+    }
+  },
+  {
+    "text": "amount euros",
+    "intent": "money_request",
+    "intent_prediction": {
+      "name": "money_transfer",
+      "confidence": 0.5319674611091614
+    }
+  },
+  {
+    "text": "30 euros",
+    "intent": "money_request",
+    "intent_prediction": {
+      "name": "money_transfer",
+      "confidence": 0.2834059000015259
+    }
+  }
+]

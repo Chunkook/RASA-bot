@@ -1,0 +1,23 @@
+version: "2.0"
+
+rules:
+
+- rule: activate plane ticket form after greeting
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - action: plane_ticket_form
+    - active_loop: plane_ticket_form
+
+- rule: submit form
+  condition:
+  - active_loop: plane_ticket_form
+  steps:
+    - action: plane_ticket_form
+    - active_loop: null
+    - action: utter_flight_booked
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye

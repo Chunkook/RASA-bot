@@ -1,0 +1,28 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_origin
+  - intent: specify_origin
+    entities:
+    - origin: Barcelona
+  - action: utter_ask_destination
+  - intent: specify_destination
+    entities:
+    - destination: Amsterdam
+  - action: utter_ask_time
+  - intent: specify_time
+    entities:
+    - time: '12'
+  - action: utter_ask_passengers
+  - intent: amount_seats
+    entities:
+    - seats: one
+  - action: utter_ask_luggage
+  - intent: deny
+  - action: utter_ask_cancellation
+  - intent: deny
+  - action: utter_flight_booked

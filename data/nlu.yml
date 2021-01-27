@@ -1,0 +1,135 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - good afternoon
+    - Hello
+    - Good day
+    - Good evening
+    - good day
+    - hey hey
+- intent: goodbye
+  examples: |
+    - cu
+    - good bye
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thank you
+    - Goodbye
+    - Bye
+    - Have a nice day
+    - Have a nice evening
+    - See you
+    - Perfect, thanks
+    - That's cool, thank you and bye
+    - Thanks, good bye
+    - Perfect, bye
+    - Thank you, goodbye
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - yeah
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - exactly
+    - that's right
+    - cool
+    - Yes
+    - yes please
+    - sure
+- intent: deny
+  examples: |
+    - no
+    - n
+    - nope
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - wrong
+    - incorrect
+    - not true
+    - No, thanks
+    - No
+- intent: specify_origin
+  examples: |
+    - [Hong Kong](GPE)
+    - From [Barcelona](GPE)
+    - I am leaving from [Amsterdam](GPE)
+    - I want to take the plane in [Berlin](GPE)
+    - leave from [Varna](GPE)
+    - origin is [Moscow](GPE)
+    - i want fly from [Bucharest](GPE)
+    - I am leaving from [Varna](GPE)
+    - fly from Athens
+- intent: specify_destination
+  examples: |
+    - To [Amsterdam](GPE)
+    - I want to go to [Paris](GPE)
+    - I want to travel to [Madrid](GPE)
+    - [Moscow](GPE)
+    - fly to [Kampala](GPE)
+    - go to [Tokyo](GPE)
+    - I want to fly to [New York](GPE)
+    - I want to fly to Barcelona
+    - I want to go to Dublin
+- intent: specify_time
+  examples: |
+    - I would like to leave at [17](CARDINAL) h
+    - At [19](CARDINAL) h
+    - [13](CARDINAL) h
+    - I would like to fly at [23](CARDINAL) h
+    - I want to leave at [7](CARDINAL) h
+    - at [8](CARDINAL)
+    - Leave at [12](CARDINAL)
+    - I want to leave at [20](CARDINAL) h
+    - I wanna leave at [14](CARDINAL) h
+    - at 16
+- intent: specify_seats
+  examples: |
+    - I would like to book [5](CARDINAL) seats
+    - [1](CARDINAL) seat
+    - book [4] seats
+    - I want [1](CARDINAL) seat
+    - [one](CARDINAL) seat
+    - [3](CARDINAL)
+    - only [2](CARDINAL)
+    - [4](CARDINAL) seats please
+    - 2 seats please
+    - book 2 seats please
+- intent: specify_luggage
+  examples: |
+    - I would like to check [2](CARDINAL) bags
+    - [1](CARDINAL) bag
+    - [5](CARDINAL)
+    - I want to book [2](CARDINAL) bags
+    - [2](CARDINAL) please
+    - just [1](CARDINAL) bag
+    - [0](CARDINAL)
+    - 1 bag
+- intent: ask_price
+  examples: |
+    - How much is the flight?
+    - How much does the ticket costs?
+    - How much is it?
+    - What is the price of the flight?

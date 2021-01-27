@@ -1,0 +1,102 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- specify_luggage
+- specify_destination
+- specify_time
+- specify_origin
+- greet
+- specify_seats
+- goodbye
+- deny
+- ask_price
+- affirm
+entities:
+- CARDINAL
+- GPE
+slots:
+  origin:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  destination:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  time:
+    type: float
+    auto_fill: false
+    influence_conversation: false
+    max_value: 1.0
+    min_value: 0.0
+  seats:
+    type: float
+    auto_fill: false
+    influence_conversation: false
+    max_value: 1.0
+    min_value: 0.0
+  luggage:
+    type: float
+    auto_fill: false
+    influence_conversation: false
+    max_value: 1.0
+    min_value: 0.0
+responses:
+  utter_greet:
+  - text: Hello! I am here to help you book a flight.
+  - text: Please answer the following questions in order to book a flight!
+  utter_goodbye:
+  - text: Goodbye.
+  utter_price:
+  - text: The price of the flight is 114 euros.
+  utter_ask_origin:
+  - text: Where are you flying from?
+  utter_ask_destination:
+  - text: Where would you like to go?
+  utter_ask_time:
+  - text: At what time would you like to fly (in the form e.g. 15 h)?
+  utter_ask_seats:
+  - text: How many seats would you like to book?
+  utter_ask_luggage:
+  - text: How many bags would you like to check?
+  utter_ask_cancellation:
+  - text: If you pay 5 euros more, we will refund you the money in case you want to cancel the flight. Are you interested?
+  utter_flight_booked:
+  - text: |-
+      Perfect! The following has been booked:
+      origin: {origin}
+      destination: {destination}
+      time: {time}
+      seats: {seats}
+      luggage: {luggage}
+      Enjoy your flight!
+actions:
+- utter_ask_cancellation
+- utter_ask_destination
+- utter_ask_luggage
+- utter_ask_origin
+- utter_ask_seats
+- utter_ask_time
+- utter_flight_booked
+- utter_goodbye
+- utter_greet
+- utter_price
+forms:
+  plane_ticket_form:
+    origin:
+    - type: from_entity
+      entity: GPE
+    destination:
+    - type: from_entity
+      entity: GPE
+    time:
+    - type: from_entity
+      entity: CARDINAL
+    seats:
+    - type: from_entity
+      entity: CARDINAL
+    luggage:
+    - type: from_entity
+      entity: CARDINAL
